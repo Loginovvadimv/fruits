@@ -1,0 +1,28 @@
+.button {
+  padding: 13px 44px;
+  border: none;
+  border-radius: 20px 80px;
+  box-shadow: 0px 10px 20px rgba(22, 52, 7, 0.1);
+  transition: 0.3s;
+
+  &--green {
+    margin-top: 18px;
+    background-color: #59BE29;
+    color: white;
+
+    &:hover {
+      background-color: #58be29e6;
+    }
+  }
+
+  &--white {
+    color: #59BE29;
+    background-color: white;
+    border: 1px solid rgba(89, 190, 41, 0.3);
+    margin-left: 25px;
+
+    &:hover {
+      background-color: rgb(248, 233, 233);
+    }
+  }
+}

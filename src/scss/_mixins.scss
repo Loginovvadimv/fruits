@@ -1,0 +1,50 @@
+$breakpoints: (
+  xs: 'only screen and (max-width: #{$media-screen-xs - 1})',
+  sm-down: 'only screen and (max-width: #{$media-screen-sm - 1})',
+  sm: 'only screen and (min-width: #{$media-screen-xs}) and (max-width: #{$media-screen-sm - 1})',
+  sm-up: 'only screen and (min-width: #{$media-screen-xs})',
+  md-down: 'only screen and (max-width: #{$media-screen-md - 1})',
+  md: 'only screen and (min-width: #{$media-screen-sm}) and (max-width: #{$media-screen-md - 1})',
+  md-up: 'only screen and (min-width: #{$media-screen-sm})',
+  lg-down: 'only screen and (max-width: #{$media-screen-lg - 1})',
+  lg: 'only screen and (min-width: #{$media-screen-md}) and (max-width: #{$media-screen-lg - 1})',
+  lg-up: 'only screen and (min-width: #{$media-screen-md})',
+  xl: 'only screen and (min-width: #{$media-screen-lg})'
+);
+
+@mixin respond-to($media) {
+  @if map-has-key($breakpoints, $media) {
+    @media #{map-get($breakpoints, $media)} { @content; }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$media}`. ";
+  }
+}
+
+$base-space: 8px;
+$min-step: 0;
+$max-step: 10;
+$offset-types: (
+  m: margin,
+  p: padding
+);
+$offset-vectors: (
+  t: top,
+  b: bottom,
+  l: left,
+  r: right
+);
+
+@mixin make-offsets {
+  @each $v, $vector in $offset-vectors {
+    @each $t, $type in $offset-types {
+      .#{$t}#{$v} {
+        @for $i from $min-step through $max-step {
+          &-x#{$i} {
+            #{$type}-#{$vector}: $base-space * $i !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.menu__title {
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    margin-top: 11px;
+    min-width: 50%;
+
+
+    &-subject {
+      &-slogan {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 150%;
+        color: #0A1902;
+        user-select: none;
+      }
+
+      &-subtitle {
+        font-size: 90px;
+        font-weight: 600;
+        line-height: 109px;
+        color: #59BE29;
+        user-select: none;
+        margin-bottom: 25px;
+      }
+
+      &-text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 29px;
+        color: rgba(#0A1902, 0.7);
+        user-select: none;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 105px;
+
+  &__links {
+    margin-top: 18px;
+
+    a {
+      text-decoration: none;
+      color: rgba(#0A1902, 0.5);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 160%;
+      margin-right: 34px;
+      padding-bottom: 8px;
+
+      &:hover {
+        color: #0A1902;
+        border-bottom: 2px solid #59BE29;
+        transition: 0.5s;
+      }
+    }
+  }
+}
