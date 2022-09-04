@@ -33,10 +33,14 @@
             &-subtitle {
                 font-size: 90px;
                 font-weight: 600;
-                line-height: 109px;
+                line-height: 1.1;
                 color: #59BE29;
                 user-select: none;
                 margin-bottom: 25px;
+
+                @include respond-to(xs) {
+                    font-size: 45px;
+                }
             }
 
             &-text {
@@ -74,6 +78,7 @@
         color: #0A1902;
         margin-bottom: 46px;
         user-select: none;
+        opacity: 70%;
     }
 }
 
@@ -163,6 +168,7 @@
             font-weight: 400;
             color: #0A1902;
             user-select: none;
+            opacity: 70%;
         }
     }
 }
@@ -192,27 +198,45 @@
                 font-weight: 400;
                 line-height: 29px;
                 user-select: none;
+                opacity: 70%;
             }
         }
     }
 }
 
-.container__content {
-    .up {
-        border-bottom: 1px solid rgba(10, 25, 2, 0.4);
-        padding-bottom: 15px;
-    }
+.container__prices {
+    display: flex;
+    justify-content: space-between;
 
-    .down {
-        padding-top: 15px;
-    }
-
-    .content-images {
+    .container-prices-container {
         display: flex;
-        justify-content: space-between;
-    }
+        justify-content: center;
+        text-align: center;
 
-    img {
-        user-select: none;
+        &-content {
+            &-text {
+                font-size: 25px;
+                line-height: 38px;
+                color: #0A1902;
+            }
+
+            &-price {
+                font-size: 35px;
+                line-height: 49px;
+                font-weight: 600;
+                color: #59BE29;
+                margin-top: 5px;
+            }
+
+            &-subtitle {
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 400;
+                color: #0A1902;
+                opacity: 70%;
+                margin-top: 5px;
+                margin-bottom: 14px;
+            }
+        }
     }
 }
