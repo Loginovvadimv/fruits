@@ -1,0 +1,9 @@
+.main-menu-ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+  .active a {
+    color: black;
+  }
+}
