@@ -36,3 +36,9 @@ body {
     background-repeat: no-repeat;
     background-position: calc(50% + 650px) 0px;
 }
+
+.bgr-img {
+    background-image: url(/img/strawberry.jpg);
+    background-repeat: no-repeat;
+    background-position: calc(50% - 350px) 5px;
+}
